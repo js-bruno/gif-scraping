@@ -18,6 +18,9 @@ NEWSPIDER_MODULE = "pixelsafari.spiders"
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
+ITEM_PIPELINES = {"scrapy.pipelines.images.ImagesPipeline": 1}
+
+
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -61,9 +64,9 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "pixelsafari.pipelines.PixelsafariPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   "pixelsafari.pipelines.PixelsafariPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
