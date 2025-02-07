@@ -65,7 +65,8 @@ ITEM_PIPELINES = {"scrapy.pipelines.images.ImagesPipeline": 1}
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "pixelsafari.pipelines.PixelsafariPipeline": 300,
+   "pixelsafari.pipelines.PixelsafariGifDownloaderPipeline": 200,
+   "pixelsafari.pipelines.PixelsafariSqlitePipeline": 100,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
